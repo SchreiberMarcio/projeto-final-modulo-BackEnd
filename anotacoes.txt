@@ -1,0 +1,135 @@
+
+Crie um recurso com a seguinte rota ' / ' Em caso de sucesso, retorna um status 200 
+Com a seguinte mensagem ('Bem vindo à aplicação')
+
+Regras Gerais
+● Não pode ter mais de uma pessoa usuária com o mesmo e-mail
+● O login deve ser feito com e-mail e senha
+● Cada recado deve ser uma pessoa usuária . Ou seja , uma pessoa pode ter vários recados. Porém um recado só pode ter uma pessoa.
+
+Sign Up - Criar pessoa usuária 
+Endereço : /signup
+Dados : 
+- Id ( identificador único)
+- Name 
+- Email 
+- Password
+
+Sign Up - Criar pessoa usuária Cada pessoa usuário deve ser um newUser
+● Name, email, password devem ser inseridos pela pessoa usuária e todos esses itens precisam ser validados .
+● Caso não passe um desses itens, informe um status (400) .
+
+Sign Up - Criar pessoa usuária 
+Caso a pessoa seja criada com sucesso, retornar um status (201) e a seguinte mensagem : 
+" Seja bem vindo { NOME } ! Pessoa usuária registrada com sucesso! 
+
+Sign Up - Criar pessoa usuária 
+Mensagens de verificação : 
+- Por favor, verifique se passou o nome . 
+- Por favor, verifique se passou o email . 
+- Email já cadastrado, insira outro . 
+- Por favor, verifique se passou a senha 
+
+Sign Up - Criar pessoa usuária 
+O identificador único, não deve ser inserido pela a pessoa usuária ao criar .Este item deve ser feito de forma automatizada
+● Você deve criar uma lista estática, que armazene as pessoas usuárias , cujo o nome seja users
+
+Login - Acessar a pessoa usuária
+Endereço : /login
+Dados : 
+- Email 
+- Password
+
+Login - Acessar a pessoa usuária 
+Deve-se verificar se a pessoa usuária inseriu os seguintes dados para fazer o login : 
+- Email 
+- Password
+
+Login - Acessar a pessoa usuária
+Caso o login seja realizado com sucesso, retornar um status (200) e a seguinte mensagem : 
+" Seja bem vindo { NOME } ! Pessoa usuária logada com sucesso!
+
+Login - Acessar a usuária 
+Caso a pessoa não tenha enviado email ou password você deve retornar as seguintes mensagens :
+- Insira um e-mail válido 
+- Insira uma senha válida 
+
+Login - Acessar a usuária 
+Além disso, só será possível fazer o login caso o email esteja cadastrado no sistema. 
+Caso contrário, retornar a seguinte mensagem : 
+" Email não encontrado no sistema,verifique ou crie uma conta"
+
+Criar mensagem - Create
+Endereço : /mensagem
+Dados : 
+- Id ( identificador único)
+- Title ( título da mensagem )
+- Description (descrição da 
+mensagem ) 
+
+Criar mensagem - Create
+Caso o operação seja realizado com sucesso, retornar um status (201) e a seguinte mensagem : 
+" Mensagem criada com sucesso! {MENSAGEM}
+
+Criar mensagem - Create Cada nova mensagem deve ser um newMensagem
+● Title, description devem ser inseridos pela pessoa usuária e todos esses itens precisam ser validados .
+● Caso não passe um desses itens,informe um status (400) 
+
+Criar mensagem - Create 
+Além disso, só é possível criar uma nova mensagem se o e-mail estiver registrado no nosso sistema. 
+Caso o e-mail não esteja no nosso sistema, deve retornar um status 404 e a seguinte mensagem : 
+" Email não encontrado, verifique ou crie uma conta "
+
+Criar mensagem - Create 
+O id de cada mensagem deve ser inserido automaticamente. 
+
+ler mensagem:
+Ler mensagem - Create
+Endereço :/massage/:email
+Dados : 
+- Email 
+
+A pessoa só conseguirá ler todas as mensagens se o e-mail estiver cadastrado em nosso sistema.
+
+Ler mensagem - Create
+
+Caso o operação seja realizado com sucesso, retornar um status (200) e a seguinte mensagem : 
+" Seja bem-vinde! {LISTA DE MENSAGENS}"
+
+Ler mensagem - Create 
+Caso o e-mail não esteja no nosso sistema, deve retornar um status 404 e a seguinte mensagem : 
+" Email não encontrado, verifique ou crie uma conta 
+
+Atualizar mensagem:
+
+Atualizar mensagem - Update
+Endereço /massage/:id
+Dados : 
+- Title 
+- Description
+
+Atualizar mensagem - Update
+
+Caso o operação seja realizado com sucesso, retornar um status (200) e a seguinte mensagem : 
+" Mensagem atualizada com sucesso { MENSAGENS ATUALIZADA}"
+
+Atualizar mensagem - Update
+
+Caso o id da mensagem não seja encontrado, retornar a seguinte mensagem : 
+"Por favor, informe um id válido da mensagem"
+
+Atualizar mensagem - Update
+
+Caso o operação seja realizado com sucesso, retornar um status (200) e a 
+seguinte mensagem :" Mensagem atualizada com sucesso ! {MENSAGEM ATUALIZADA}"
+
+DELETAR MENSAGEM
+
+Deletar mensagem - Delete Endereço /massage/:id
+Caso o id da mensagem não seja encontrado no nosso banco, retorne a 
+seguinte mensagem : " Mensagem não encontrada, verifique o identificador em nosso banco"
+
+Deletar mensagem - Delete 
+Caso o operação seja realizado com sucesso, retornar um status (200) e a 
+seguinte mensagem :" Mensagem apagada com sucesso"
+
