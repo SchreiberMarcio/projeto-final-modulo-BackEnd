@@ -14,6 +14,9 @@ let mensagens = [];
 
 //<------------------------------------------- Bem vindo ------------------------------------------>
 app.get("/", (req, res) => {
+  if (req.url !== "/") {
+    return res.status(404).send("Página não encontrada");
+  }
   res.status(200).send("Bem vindo à aplicação");
 });
 
